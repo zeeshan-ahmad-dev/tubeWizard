@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Loader -->
+    <div class="loader-container active">
+        <div class="loader"></div>
+        Loading...
+    </div>
+
+    <!-- Scroll To top  -->
+    <a href="#" class="scrollToTop hide">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-chevron-up">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </a>
+
+    <!--  Navbar -->
+    <header>
+        <!-- Navbar for small screens -->
+        <nav class="sidebar hide">
+            <div class="sidebar-container">
+
+                <div class="sidebar-top">
+                    <div class="sidebar-header sidebar-padding">
+                        <h4 class="sidebar-title">PAGES</h4>
+                        <button class="sidebar-close-btn" aria-label="Close sidebar">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <ul class="sidebar-menu sidebar-padding">
+                        <li><a href="#"><i class="fas fa-info-circle"></i> About</a></li>
+                        <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+                        <li><a href="#"><i class="fas fa-tags"></i> Pricing</a></li>
+                        <li><a href="#"><i class="fas fa-question-circle"></i> FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="sidebar-components sidebar-padding">
+                    <h4>COMPONENTS</h4>
+                    <div class="component-lists">
+                        <ul class="components-menu-list1">
+                            <li><a href="#">Alerts</a></li>
+                            <li><a href="#">Badges</a></li>
+                            <li><a href="#">Buttons</a></li>
+                            <li><a href="#">Colors</a></li>
+                            <li><a href="#">Accordion</a></li>
+                        </ul>
+                        <ul class="components-menu-list2">
+
+                            <li><a href="#">Overlay</a></li>
+                            <li><a href="#">Progress</a></li>
+                            <li><a href="#">Lightbox</a></li>
+                            <li><a href="#">Tabs</a></li>
+                            <li><a href="#">Tables</a></li>
+                            <li><a href="#">Typography</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sidebar-footer sidebar-padding">
+                    <a href="#">Sign in <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Navbar   -->
+        <nav class="navbar">
+            <div class="nav-left">
+                <img class="logo" src="./img/logo.png" alt="">
+            </div>
+            <div class="nav-right">
+                <ul class="nav-list">
+                    <li>
+                        <a href="#">Pricing </a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                    <li>
+                        <a href="#">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#">Help</a>
+                    </li>
+                </ul>
+                <!-- Dark Mode -->
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+
+                <a href="#" class="login-btn">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M14 4L17.5 4C20.5577 4 20.5 8 20.5 12C20.5 16 20.5577 20 17.5 20H14M15 12L3 12M15 12L11 16M15 12L11 8"
+                            stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    Login
+                </a>
+            </div>
+            <div class="hamburger"><i class="fas fa-bars"></i></div>
+        </nav>
+    </header>
+
+
+    <!-- Main body -->
+    <main>
+        <section class="hero-section">
+            <div class="shapes-container">
+                <div class="shape-1"></div>
+                <div class="shape-2"></div>
+            </div>
+            <div class="hero-container">
+                <div class="h-c-d1">
+                    <span><svg class="svg-inline--fa fa-award font-md me-3" aria-hidden="true" focusable="false"
+                            data-prefix="fas" data-icon="award" role="img" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 384 512" data-fa-i2svg="">
+                            <path fill="currentColor"
+                                d="M173.8 5.5c11-7.3 25.4-7.3 36.4 0L228 17.2c6 3.9 13 5.8 20.1 5.4l21.3-1.3c13.2-.8 25.6 6.4 31.5 18.2l9.6 19.1c3.2 6.4 8.4 11.5 14.7 14.7L344.5 83c11.8 5.9 19 18.3 18.2 31.5l-1.3 21.3c-.4 7.1 1.5 14.2 5.4 20.1l11.8 17.8c7.3 11 7.3 25.4 0 36.4L366.8 228c-3.9 6-5.8 13-5.4 20.1l1.3 21.3c.8 13.2-6.4 25.6-18.2 31.5l-19.1 9.6c-6.4 3.2-11.5 8.4-14.7 14.7L301 344.5c-5.9 11.8-18.3 19-31.5 18.2l-21.3-1.3c-7.1-.4-14.2 1.5-20.1 5.4l-17.8 11.8c-11 7.3-25.4 7.3-36.4 0L156 366.8c-6-3.9-13-5.8-20.1-5.4l-21.3 1.3c-13.2 .8-25.6-6.4-31.5-18.2l-9.6-19.1c-3.2-6.4-8.4-11.5-14.7-14.7L39.5 301c-11.8-5.9-19-18.3-18.2-31.5l1.3-21.3c.4-7.1-1.5-14.2-5.4-20.1L5.5 210.2c-7.3-11-7.3-25.4 0-36.4L17.2 156c3.9-6 5.8-13 5.4-20.1l-1.3-21.3c-.8-13.2 6.4-25.6 18.2-31.5l19.1-9.6C65 70.2 70.2 65 73.4 58.6L83 39.5c5.9-11.8 18.3-19 31.5-18.2l21.3 1.3c7.1 .4 14.2-1.5 20.1-5.4L173.8 5.5zM272 192a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM1.3 441.8L44.4 339.3c.2 .1 .3 .2 .4 .4l9.6 19.1c11.7 23.2 36 37.3 62 35.8l21.3-1.3c.2 0 .5 0 .7 .2l17.8 11.8c5.1 3.3 10.5 5.9 16.1 7.7l-37.6 89.3c-2.3 5.5-7.4 9.2-13.3 9.7s-11.6-2.2-14.8-7.2L74.4 455.5l-56.1 8.3c-5.7 .8-11.4-1.5-15-6s-4.3-10.7-2.1-16zm248 60.4L211.7 413c5.6-1.8 11-4.3 16.1-7.7l17.8-11.8c.2-.1 .4-.2 .7-.2l21.3 1.3c26 1.5 50.3-12.6 62-35.8l9.6-19.1c.1-.2 .2-.3 .4-.4l43.2 102.5c2.2 5.3 1.4 11.4-2.1 16s-9.3 6.9-15 6l-56.1-8.3-32.2 49.2c-3.2 5-8.9 7.7-14.8 7.2s-11-4.3-13.3-9.7z">
+                            </path>
+                        </svg>1st Awarded App of 2023</span>
+                    <!-- <h1>The YouTube Power User's Dream</h1> -->
+                    <h3>The YouTube Power User's Dream</h3>
+                    <p>Are you tired of losing track of your favorite videos in the endless YouTube abyss? Want to organize your saved content like a pro and unlock the true potential of your video library? Discover TubeWizard – the ultimate companion for YouTube power users. Save, organize, and rediscover your video content effortlessly. Your personalized video library awaits!</p>
+                    <a href="#">Get Started - It's Free</a>
+                </div>
+                <div class="mobile-device iphone-x light">
+                    <div class="screen">
+                        <img src="https://via.placeholder.com/375x812?text=375x812" class="img-responsive"
+                            alt="App Screenshot">
+                        <img class="comment" src="https://via.placeholder.com/375x88" alt="">
+                    </div>
+                    <div class="notch"></div>
+                </div>
+            </div>
+        </section>
+        <!-- Icons scroll -->
+        <section class="swiper-section">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./img/logos/1.svg" alt="Logo 1">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/logos/2.svg" alt="Logo 2">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/logos/3.svg" alt="Logo 3">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/logos/4.svg" alt="Logo 4">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/logos/5.svg" alt="Logo 5">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/logos/3.svg" alt="Logo 3">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features">
+            <div>
+                <h2>Premium features</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, nulla, voluptates. Architecto eum
+                    minima necessitatibus quo reiciendis! Aliquam culpa doloremque eaque esse illo, nemo nesciunt nobis
+                    quia sapiente tenetur veniam.</p>
+            </div>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="feature-box">
+                        <div class="text">
+                            <h3>Flexible Categorization</h3>
+                            <p>Organize your videos with optional categories, allowing for a personalized classification
+                                system.</p>
+                            <a href="#learn-more" class="feature-btn">Learn More</a>
+                        </div>
+                        <div class="image">
+                            <img src="https://via.placeholder.com/400x300?text=Feature+1" alt="Flexible Categorization">
+                        </div>
+                    </div>
+
+                    <div class="feature-box">
+                        <div class="text">
+                            <h3>Multi-Tagging System</h3>
+                            <p>Attach up to 5 tags per video for precise and multifaceted content labeling.</p>
+                            <a href="#learn-more" class="feature-btn">Learn More</a>
+                        </div>
+                        <div class="image">
+                            <img src="https://via.placeholder.com/400x300?text=Feature+2" alt="Multi-Tagging System">
+                        </div>
+                    </div>
+
+                    <div class="feature-box">
+                        <div class="text">
+                            <h3>Integrated Knowledge Capture</h3>
+                            <p>Our optional notes feature allows you to attach your thoughts and insights directly to
+                                videos, creating a personalized learning experience.</p>
+                            <a href="#learn-more" class="feature-btn">Learn More</a>
+                        </div>
+                        <div class="image">
+                            <img src="https://via.placeholder.com/400x300?text=Feature+3"
+                                alt="Integrated Knowledge Capture">
+                        </div>
+                    </div>
+
+                    <div class="feature-box">
+                        <div class="text">
+                            <h3>Thematic Video Grouping</h3>
+                            <p>Create playlists to group related videos, enhancing your content organization and
+                                learning flow.</p>
+                            <a href="#learn-more" class="feature-btn">Learn More</a>
+                        </div>
+                        <div class="image">
+                            <img src="https://via.placeholder.com/400x300?text=Feature+4" alt="Thematic Video Grouping">
+                        </div>
+                    </div>
+
+                    <div class="feature-box">
+                        <div class="text">
+                            <h3>Hierarchical Content Structure</h3>
+                            <p>Organize playlists into collections, enabling a higher level of content structuring for
+                                complex topics or projects.</p>
+                            <a href="#learn-more" class="feature-btn">Learn More</a>
+                        </div>
+                        <div class="image">
+                            <img src="https://via.placeholder.com/400x300?text=Feature+5"
+                                alt="Hierarchical Content Structure">
+                        </div>
+                    </div>
+
+                    <div class="feature-box">
+                        <div class="text">
+                            <h3>Future Viewing Queue</h3>
+                            <p>Mark videos as 'Watch Later' to create a personalized list of content to revisit.</p>
+                            <a href="#learn-more" class="feature-btn">Learn More</a>
+                        </div>
+                        <div class="image">
+                            <img src="https://via.placeholder.com/400x300?text=Feature+6" alt="Future Viewing Queue">
+                        </div>
+                    </div>
+
+                    <div class="feature-box">
+                        <div class="text">
+                            <h3>Priority Highlighting</h3>
+                            <p>Pin important videos to keep them easily accessible at the top of your lists.</p>
+                            <a href="#learn-more" class="feature-btn">Learn More</a>
+                        </div>
+                        <div class="image">
+                            <img src="https://via.placeholder.com/400x300?text=Feature+7" alt="Priority Highlighting">
+                        </div>
+                    </div>
+
+                    <div class="feature-box">
+                        <div class="text">
+                            <h3>Immediate Viewing Flag</h3>
+                            <p>Use the 'Watch Now' feature to prioritize videos for immediate viewing.</p>
+                            <a href="#learn-more" class="feature-btn">Learn More</a>
+                        </div>
+                        <div class="image">
+                            <img src="https://via.placeholder.com/400x300?text=Feature+8" alt="Immediate Viewing Flag">
+                        </div>
+                    </div>
+
+                    <div class="feature-box">
+                        <div class="text">
+                            <h3>Significance Marker</h3>
+                            <p>Highlight videos as 'Important' to emphasize their value in your collection.</p>
+                            <a href="#learn-more" class="feature-btn">Learn More</a>
+                        </div>
+                        <div class="image">
+                            <img src="https://via.placeholder.com/400x300?text=Feature+9" alt="Significance Marker">
+                        </div>
+                    </div>
+
+                    <div class="feature-box">
+                        <div class="text">
+                            <h3>Time-Sensitive Indicator</h3>
+                            <p>Mark videos as 'Urgent' to ensure timely viewing of critical content.</p>
+                            <a href="#learn-more" class="feature-btn">Learn More</a>
+                        </div>
+                        <div class="image">
+                            <img src="https://via.placeholder.com/400x300?text=Feature+10"
+                                alt="Time-Sensitive Indicator">
+                        </div>
+                    </div>
+
+                    <div class="feature-box">
+                        <div class="text">
+                            <h3>Progress Tracking</h3>
+                            <p>Toggle watch status to easily distinguish between viewed and unviewed videos.</p>
+                            <a href="#learn-more" class="feature-btn">Learn More</a>
+                        </div>
+                        <div class="image">
+                            <img src="https://via.placeholder.com/400x300?text=Feature+11" alt="Progress Tracking">
+                        </div>
+                    </div>
+
+                    <div class="feature-box">
+                        <div class="text">
+                            <h3>Individual Content Sharing</h3>
+                            <p>Share specific bookmarks with others for focused collaboration or recommendations.</p>
+                            <a href="#learn-more" class="feature-btn">Learn More</a>
+                        </div>
+                        <div class="image">
+                            <img src="https://via.placeholder.com/400x300?text=Feature+12"
+                                alt="Individual Content Sharing">
+                        </div>
+                    </div>
+
+                    <div class="feature-box">
+                        <div class="text">
+                            <h3>Curated List Sharing</h3>
+                            <p>Share entire playlists to distribute curated sets of videos to colleagues or friends.</p>
+                            <a href="#learn-more" class="feature-btn">Learn More</a>
+                        </div>
+                        <div class="image">
+                            <img src="https://via.placeholder.com/400x300?text=Feature+13" alt="Curated List Sharing">
+                        </div>
+                    </div>
+
+                    <div class="feature-box">
+                        <div class="text">
+                            <h3>Comprehensive Collection Sharing</h3>
+                            <p>Share playlist collections to provide others with extensive, organized content sets.</p>
+                            <a href="#learn-more" class="feature-btn">Learn More</a>
+                        </div>
+                        <div class="image">
+                            <img src="https://via.placeholder.com/400x300?text=Feature+14"
+                                alt="Comprehensive Collection Sharing">
+                        </div>
+                    </div>
+
+                    <div class="feature-box">
+                        <div class="text">
+                            <h3>Granular Privacy Control</h3>
+                            <p>Disable sharing on specific items to maintain privacy for sensitive or personal content.
+                            </p>
+                            <a href="#learn-more" class="feature-btn">Learn More</a>
+                        </div>
+                        <div class="image">
+                            <img src="https://via.placeholder.com/400x300?text=Feature+15"
+                                alt="Granular Privacy Control">
+                        </div>
+                    </div>
+
+                    <div class="feature-box">
+                        <div class="text">
+                            <h3>Public Expertise Showcase</h3>
+                            <p>Create public sharing pages to demonstrate your knowledge and content curation skills.
+                            </p>
+                            <a href="#learn-more" class="feature-btn">Learn More</a>
+                        </div>
+                        <div class="image">
+                            <img src="https://via.placeholder.com/400x300?text=Feature+16"
+                                alt="Public Expertise Showcase">
+                        </div>
+                    </div>
+
+                    <div class="feature-box">
+                        <div class="text">
+                            <h3>Video Favoriting</h3>
+                            <p>Mark individual videos as favorites for quick access to your most valued content.</p>
+                            <a href="#learn-more" class="feature-btn">Learn More</a>
+                        </div>
+                        <div class="image">
+                            <img src="https://via.placeholder.com/400x300?text=Feature+17" alt="Video Favoriting">
+                        </div>
+                    </div>
+
+                    <div class="feature-box">
+                        <div class="text">
+                            <h3>Playlist Favoriting</h3>
+                            <p>Highlight your preferred video lists by favoriting entire playlists.</p>
+                            <a href="#learn-more" class="feature-btn">Learn More</a>
+                        </div>
+                        <div class="image">
+                            <img src="https://via.placeholder.com/400x300?text=Feature+18" alt="Playlist Favoriting">
+                        </div>
+                    </div>
+
+                    <div class="feature-box">
+                        <div class="text">
+                            <h3>Collection Favoriting</h3>
+                            <p>Mark entire playlist collections as favorites for top-level content set highlighting.</p>
+                            <a href="#learn-more" class="feature-btn">Learn More</a>
+                        </div>
+                        <div class="image">
+                            <img src="https://via.placeholder.com/400x300?text=Feature+19" alt="Collection Favoriting">
+                        </div>
+                    </div>
+
+                    <div class="feature-box">
+                        <div class="text">
+                            <h3>Advanced Content Filtering</h3>
+                            <p>Utilize sophisticated filtering options to precisely narrow down your video collection.
+                            </p>
+                            <a href="#learn-more" class="feature-btn">Learn More</a>
+                        </div>
+                        <div class="image">
+                            <img src="https://via.placeholder.com/400x300?text=Feature+20"
+                                alt="Advanced Content Filtering">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <div>
+                    <button class="prev" onclick="prevSlide()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-arrow-left">
+                            <line x1="19" y1="12" x2="5" y2="12"></line>
+                            <polyline points="12 19 5 12 12 5"></polyline>
+                        </svg>
+                    </button>
+                    <button class="next" onclick="nextSlide()">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-arrow-right">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonial Section -->
+        <section id="testimonial-container">
+            <div>
+                <h2 class="testimonial-head">Client Reviews</h2>
+                <p class="testimonial-para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, nulla,
+                    voluptates. Architecto eum
+                    minima necessitatibus quo reiciendis! Aliquam culpa doloremque eaque esse illo, nemo nesciunt nobis
+                    quia sapiente tenetur veniam.</p>
+            </div>
+            <div class="t-boxes-container">
+                <div class="testimonial-box">
+                    <p>
+                        "TubeWizard has completely transformed how I use YouTube. I no longer lose track of important videos, and I’ve built an organized library for everything I care about."
+                    </p>
+                    <div class="t-box-bottom">
+                        <div class="t-img">
+                            <img class="profile-img" src="https://via.placeholder.com/60x60">
+                        </div>
+                        <div class="t-name">
+                            <h4>
+                                Sarah M.
+                            </h4>
+                            <p class="">
+                                Digital Content Creator
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-box">
+                    <p>
+                        "I use TubeWizard to curate playlists for work and personal development. It’s a game-changer for anyone serious about YouTube."
+                    </p>
+                    <div class="t-box-bottom">
+                        <div class="t-img">
+                            <img class="profile-img" src="https://via.placeholder.com/60x60">
+                        </div>
+                        <div class="t-name">
+                            <h4>
+                                John D.
+                            </h4>
+                            <p class="">
+                                Marketing Professional
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-box">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus elementum magna ut duis pulvinar
+                        tincidunt vivamus adipiscing quam. Eget dui quis etiam sed eget sed est.
+                    </p>
+                    <div class="t-box-bottom">
+                        <div class="t-img">
+                            <img class="profile-img" src="https://via.placeholder.com/60x60">
+                        </div>
+                        <div class="t-name">
+                            <h4>
+                                Jane Doe
+                            </h4>
+                            <p class="">
+                                CEO
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section id="benefits-container">
+            <div>
+                <h2 class="testimonial-head">Benefits You Can’t Ignore:</h2>
+                <!-- <p class="testimonial-para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, nulla,
+                    voluptates. Architecto eum
+                    minima necessitatibus quo reiciendis! Aliquam culpa doloremque eaque esse illo, nemo nesciunt nobis
+                    quia sapiente tenetur veniam.</p> -->
+            </div>
+            <di<div id="benefits">
+                <div class="benefit">
+                    <span>
+                        <svg viewBox="0 -0.5 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.5 12.5L10.167 17L19.5 8" stroke="#000000" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </span>
+                    <div>
+                        <h3>Enhanced Productivity</h3>
+                        <p>Streamline your YouTube workflow and save time with our intuitive organization tools.</p>
+                    </div>
+                </div>
+                <div class="benefit">
+                    <span>
+                        <svg viewBox="0 -0.5 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.5 12.5L10.167 17L19.5 8" stroke="#000000" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </span>
+                    <div>
+                        <h3>Improved Learning</h3>
+                        <p>Capture insights and structure content for better retention and understanding.</p>
+                    </div>
+                </div>
+                <div class="benefit">
+                    <span>
+                        <svg viewBox="0 -0.5 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.5 12.5L10.167 17L19.5 8" stroke="#000000" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </span>
+                    <div>
+                        <h3>Effortless Collaboration</h3>
+                        <p>Share your curated content with colleagues and friends to spread knowledge.</p>
+                    </div>
+                </div>
+                <div class="benefit">
+                    <span>
+                        <svg viewBox="0 -0.5 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.5 12.5L10.167 17L19.5 8" stroke="#000000" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </span>
+                    <div>
+                        <h3>Personalized Content Management</h3>
+                        <p>Tailor your video organization to fit your unique needs with flexible categorization and
+                            multi-tagging.</p>
+                    </div>
+                </div>
+                <div class="benefit">
+                    <span>
+                        <svg viewBox="0 -0.5 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.5 12.5L10.167 17L19.5 8" stroke="#000000" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </span>
+                    <div>
+                        <h3>Efficient Content Discovery</h3>
+                        <p>Quickly find the right video at the right time with advanced filtering and prioritization
+                            tools.</p>
+                    </div>
+                </div>
+                <div class="benefit">
+                    <span>
+                        <svg viewBox="0 -0.5 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.5 12.5L10.167 17L19.5 8" stroke="#000000" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </span>
+                    <div>
+                        <h3>Focused Viewing Experience</h3>
+                        <p>Prioritize your viewing with features like 'Watch Later,' 'Watch Now,' and 'Urgent' to stay
+                            on top of important content.</p>
+                    </div>
+                </div>
+                <div class="benefit">
+                    <span>
+                        <svg viewBox="0 -0.5 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.5 12.5L10.167 17L19.5 8" stroke="#000000" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </span>
+                    <div>
+                        <h3>Comprehensive Knowledge Structuring</h3>
+                        <p>Build a robust personal learning system with hierarchical organization from individual videos
+                            to collections.</p>
+                    </div>
+                </div>
+                <div class="benefit">
+                    <span>
+                        <svg viewBox="0 -0.5 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.5 12.5L10.167 17L19.5 8" stroke="#000000" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </span>
+                    <div>
+                        <h3>Customized Sharing Options</h3>
+                        <p>Control what you share and with whom, from individual bookmarks to entire collections, with
+                            granular privacy settings.</p>
+                    </div>
+                </div>
+                <div class="benefit">
+                    <span>
+                        <svg viewBox="0 -0.5 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.5 12.5L10.167 17L19.5 8" stroke="#000000" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </span>
+                    <div>
+                        <h3>Expertise Showcase</h3>
+                        <p>Demonstrate your knowledge and curation skills through public sharing pages and carefully
+                            organized content sets.</p>
+                    </div>
+                </div>
+                <div class="benefit">
+                    <span>
+                        <svg viewBox="0 -0.5 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.5 12.5L10.167 17L19.5 8" stroke="#000000" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </span>
+                    <div>
+                        <h3>Adaptive Learning Path</h3>
+                        <p>Create a personalized learning journey by organizing and prioritizing content to match your
+                            evolving educational needs.</p>
+                    </div>
+                </div>
+                <div class="benefit">
+                    <span>
+                        <svg viewBox="0 -0.5 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.5 12.5L10.167 17L19.5 8" stroke="#000000" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </span>
+                    <div>
+                        <h3>Enhanced Content Recall</h3>
+                        <p>Easily revisit and reinforce key information with features like favoriting, note-taking, and
+                            progress tracking.</p>
+                    </div>
+                </div>
+                </div>
+        </section>
+
+        <!-- How it work section -->
+
+        <section class="how-it-works">
+            <h2>How It Works</h2>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <h3>Save and Organize Instantly</h3>
+                    <p>Whenever you come across a video you want to save, TubeWizard's simple interface allows you to tag and categorize it in seconds. Keep your library clean and accessible with custom categories, smart tagging, and intuitive search functionality.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h3>Rediscover with Ease</h3>
+                    <p>Don't waste time hunting through your history or subscriptions. TubeWizard’s advanced search and filtering system makes it easy to rediscover that perfect clip – whether it's from last week or last year.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Share Like a Pro</h3>
+                    <p>Found something worth sharing? With TubeWizard, you can create custom playlists and collections, and share them effortlessly with friends, colleagues, or social media followers</p>
+                </div>
+            </div>
+            <!-- CTA Button -->
+            <div class="stepsBtn-container">
+                <a href="#signup" class="stepBtn">Ready to Sign Up?</a>
+            </div>
+        </section>
+
+        <!-- pricing section -->
+        <section class="pricing-section">
+            <h2>Our Pricing Plans</h2>
+            <div class="pricing-cards">
+                <div class="pricing-card free-plan">
+                    <h3>Free Plan</h3>
+                    <p>$0/month</p>
+                    <ul>
+                        <li>Basic Features</li>
+                        <li>Limited Access</li>
+                        <li>Community Support</li>
+                    </ul>
+                    <button class="btn-select">Select Free Plan</button>
+                </div>
+
+                <div class="pricing-card paid-plan">
+                    <h3>Premium Plan</h3>
+                    <p>$29.99/month</p>
+                    <ul>
+                        <li>All Premium Features</li>
+                        <li>Unlimited Access</li>
+                        <li>Priority Support</li>
+                    </ul>
+                    <button class="btn-select">Select Premium Plan</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Create Acccount Section -->
+        <section class="createAcc-container">
+            <div class="">
+                <p>Ready to get started?</p>
+                <h2>Create an account now</h2>
+            </div>
+            <a class="createAcc-btn" href="#">Create Dashboard account</a>
+        </section>
+
+        <!-- Footer -->
+
+        <footer class="footer">
+            <div class="footer-top">
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Disclaimer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Contact Support</a></li>
+                        <li><a href="#">Sitemap</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <ul class="social-media">
+                        <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                    </ul>
+                </div>
+                <!-- Call to Action Section -->
+                <div class="footer-section cta-section">
+                    <h3>Stay Updated</h3>
+                    <p>Subscribe to our newsletter to get the latest updates and promotions.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn-cta">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Company Name, All rights reserved.</p>
+                <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </footer>
+    </main>
+    <!-- JS -->
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
